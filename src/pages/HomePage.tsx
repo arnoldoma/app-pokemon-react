@@ -40,7 +40,6 @@ export const HomePage = () => {
 
     }
 
-
     return (
         <div className="container mt-5">
             <h1>Lista Pokemones</h1>
@@ -53,11 +52,9 @@ export const HomePage = () => {
                 onChange={onSearchChange}
             />
             <hr />
-
             <button onClick={prevPage} className="btn btn-danger">Anterior</button>
             <button onClick={nextPage} className="btn btn-danger mx-2">Siguiente</button>
-
-            <table className="table">
+            <table className="table table-striped">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -75,7 +72,7 @@ export const HomePage = () => {
                                     <img
                                         src={poke.pic}
                                         alt={poke.name}
-                                        style={{ height: 75 }}
+                                        style={{ height: 50 }}
                                     />
                                 </td>
                             </tr>
@@ -83,7 +80,6 @@ export const HomePage = () => {
                     }
                 </tbody>
             </table>
-
             {
                 isLoading && <Loading />
             }
